@@ -218,14 +218,14 @@ bool lexer(Arena *arena, u8 *input, u64 inputLength)
     return true;
 }
 
-enum Operator {
-    PLUS, MINUS, MULTIPLY, DIVIDE,
-};
+// enum Operator {
+//     PLUS, MINUS, MULTIPLY, DIVIDE,
+// };
 
 struct Expr {
     Expr *left;
     Expr *right;
-    Operator op;
+    TokenEnum op;
     // or
     u64 value;
     
@@ -276,6 +276,7 @@ Expr parseSubexpr(Arena *lexIn, u64 lexIndex, Arena *parseOut, s64 priority) {
             } break;
         }
     }
+    return expr;
 }
 
 bool parser(Arena *lexIn, Arena *parseOut) {
@@ -288,6 +289,7 @@ bool parser(Arena *lexIn, Arena *parseOut) {
     u64 i = 0;
     while (i < length) {
     }
+    return false;
 }
 
 int main()
