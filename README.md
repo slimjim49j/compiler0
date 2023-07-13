@@ -127,3 +127,7 @@ https://youtu.be/MnctEW1oL-E
 ## Memory Allocation Strategies
 
 https://www.rfleury.com/p/untangling-lifetimes-the-arena-allocator
+
+## Compiler Explorer
+
+https://godbolt.org/
