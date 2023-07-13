@@ -107,22 +107,16 @@ ANTLR can be used in C# to create an interpreter / compiler for a grammar define
 Recursive descent parsing.
 
 ```
-Graphic of recursive descent parser
-Maybe some pseudocode
+Example input:
+5 * 4 + 3
+
+Output tree:
+        +
+       / \
+      *   3
+     / \
+    5   4
 ```
-
----
-
-### Let's Look at Rust
-
-Come up with some rust examples of what compilation looks like.
-
-Stack framing. What is the stack? Memory overview.
-Recursion maybe.
-
-What does a struct look like.
-
-What does a trait look like. Monomorphization vs dynamic dispatch
 
 ---
 
@@ -133,33 +127,3 @@ https://youtu.be/MnctEW1oL-E
 ## Memory Allocation Strategies
 
 https://www.rfleury.com/p/untangling-lifetimes-the-arena-allocator
-
-
-
-
-
-
-
-
-
-
-5 * 4 + 3
-
-
-int num
-while subexpr
-    match num
-        store 5
-    match *
-        prio is 100
-        100 > -999
-            parseExpr(100)
-
-
-int num while subexpr
-    match num
-        store 4
-
-
-
-

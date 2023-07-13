@@ -375,7 +375,6 @@ u64 parseSubexpr(Arena *lexIn, u64 startLexingAt, Arena *parseOut, s64 priority,
         {
             if (operand1Filled || leftExpr)
             {
-                // ! do this
                 if (binaryOpPriority > priority)
                 {
                     // parse right side of multiply
@@ -447,9 +446,6 @@ Expr *parser(Arena *lexIn, Arena *parseOut)
     *expr = {};
     parseSubexpr(lexIn, 0, parseOut, -9999, expr);
     return expr;
-    // todo create and push to arr of to level exprs
-    // todo parse subexpr
-    // todo the parseSubexpr should take in a double pointer? to the top level
 }
 
 // num high num med num low num
@@ -573,18 +569,3 @@ int main()
 
     return 0;
 }
-// todo:
-// implement attemptAlpha
-// test token stream
-// alloc token stream to arena
-// build parse tree from token array
-// convert parse tree to instruction stream
-// read input from file
-// output to file
-// link
-
-// planned features:
-// math ops
-// OOP and parens
-// variable declaration
-// if / while loops
